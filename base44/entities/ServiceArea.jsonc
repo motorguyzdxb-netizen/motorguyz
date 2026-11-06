@@ -1,0 +1,53 @@
+{
+  "name": "ServiceArea",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Area name",
+      "description": "The Dubai district or community this record covers."
+    },
+    "description": {
+      "type": "string",
+      "title": "Area description",
+      "description": "A short, topical sentence about onsite repair service in this area."
+    },
+    "averageResponseMinutes": {
+      "type": "number",
+      "title": "Average response (minutes)",
+      "description": "Typical arrival time for a mechanic to reach this area."
+    },
+    "popularService": {
+      "type": "string",
+      "title": "Popular service",
+      "description": "The most-booked onsite service in this area."
+    },
+    "neighborhoods": {
+      "type": "string",
+      "title": "Neighborhoods covered",
+      "description": "Sub-communities or landmarks within this service area."
+    }
+  },
+  "required": [
+    "name",
+    "description"
+  ],
+  "rls": {
+    "read": {},
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}
